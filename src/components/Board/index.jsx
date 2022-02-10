@@ -2,7 +2,17 @@ import Button from '../Button'
 
 function Board () {
     return(
-      <Button />
+      <div>
+        <Button />
+        <Button />
+        <Button />
+        <Button />
+        <Button />
+        <Button />
+        <Button />
+        <Button />
+        <Button />
+      </div>
     )
 }
 
