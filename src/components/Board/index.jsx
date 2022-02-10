@@ -1,5 +1,9 @@
+import Button from '../Button'
+
 function Board () {
-    throw 'This component is not defined yet!'
+    return(
+      <Button />
+    )
 }
 
 export default Board
