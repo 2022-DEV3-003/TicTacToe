@@ -1,5 +1,9 @@
+import Board from '../Board'
+
 function TicTacToe() {
-  throw 'This component is not defined yet!'
+  return (
+    <Board />
+  )
 }
 
 export default TicTacToe
