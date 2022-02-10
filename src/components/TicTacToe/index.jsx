@@ -6,15 +6,25 @@ function TicTacToe() {
   const [xTurn, setXTurn] = useState(true)
   console.log(array)
 
-  function handleClick() {
-    console.log(xTurn ? "het is aan X" : "het is aan O")
+  function handleClick(index) {
+    // copy the state
+    const arrayCopy = [...array]
+    // check if there is a winner
+
+    // check if space is not already clicked
+
+    // put an X or an O in the Array
+    arrayCopy[index] = xTurn ? "X" : "O"
+    // return value to the state
+    setArray(arrayCopy)
+    console.log(arrayCopy)
+    // set the turn to X or O
     setXTurn(!xTurn)
   }
 
   return (
     <div>
-      <Board />
-      <button onClick={() => handleClick()}>Click me!</button>
+      <Board onClick={handleClick}/>
     </div>
   )
 }

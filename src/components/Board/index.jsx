@@ -1,17 +1,17 @@
 import Button from '../Button'
 
-function Board () {
+function Board ({onClick}) {
     return(
       <div className='board'>
-        <Button value="1" onClick={() => console.log(0)} />
-        <Button value="2" onClick={() => console.log(1)} />
-        <Button value="3" onClick={() => console.log(2)} />
-        <Button value="4" onClick={() => console.log(3)} />
-        <Button value="5" onClick={() => console.log(4)} />
-        <Button value="6" onClick={() => console.log(5)} />
-        <Button value="7" onClick={() => console.log(6)} />
-        <Button value="8" onClick={() => console.log(7)} />
-        <Button value="9" onClick={() => console.log(8)} />
+        <Button value="1" onClick={() => onClick(0)} />
+        <Button value="2" onClick={() => onClick(1)} />
+        <Button value="3" onClick={() => onClick(2)} />
+        <Button value="4" onClick={() => onClick(3)} />
+        <Button value="5" onClick={() => onClick(4)} />
+        <Button value="6" onClick={() => onClick(5)} />
+        <Button value="7" onClick={() => onClick(6)} />
+        <Button value="8" onClick={() => onClick(7)} />
+        <Button value="9" onClick={() => onClick(8)} />
       </div>
     )
 }
