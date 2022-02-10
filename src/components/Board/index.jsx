@@ -4,7 +4,7 @@ function Board ({onClick, array}) {
     return(
       <div className='board'>
       {array.map((value, index) => (
-         <Button value={value} onClick={() => onClick(index)} />
+         <Button key={index} value={value} onClick={() => onClick(index)} />
        ))}
       </div>
     )
