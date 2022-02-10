@@ -24,7 +24,7 @@ function TicTacToe() {
 
   return (
     <div>
-      <Board onClick={handleClick}/>
+      <Board onClick={handleClick} array={array}/>
     </div>
   )
 }
