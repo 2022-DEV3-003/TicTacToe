@@ -37,9 +37,9 @@ function TicTacToe() {
 
       {!isWinner && !isDraw && <h2> It's {xTurn ? "X" : "O"}'s turn </h2>}
 
-       <div className={(isWinner || isDraw) && "app__end"}>
+       <div className={(isWinner || isDraw) ? "app__end" : undefined}>
          {isWinner && <p>The winner of this game is {!xTurn ? "X" : "O"}</p>}
-         {isDraw && <p>The game ended in a draw!</p>}
+         {!isWinner && isDraw && <p>The game ended in a draw!</p>}
          {(isWinner || isDraw) && (
            <button onClick={handleRestart}>Play again</button>
          )}
