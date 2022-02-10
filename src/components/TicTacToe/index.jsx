@@ -11,7 +11,7 @@ function TicTacToe() {
     // copy the state
     const arrayCopy = [...array]
     // check if there is a winner
-    console.log(isWinner)
+    if (isWinner) return
     // check if space is not already clicked
     if (arrayCopy[index] !== null) return
     // put an X or an O in the Array
@@ -23,9 +23,19 @@ function TicTacToe() {
     setXTurn(!xTurn)
   }
 
+  function handleRestart() {
+    // set the turn to be X, as he always starts the game
+    setXTurn(true)
+    // empty the Array
+    setArray(Array(9).fill(null))
+  }
+
   return (
     <div>
       <Board onClick={handleClick} array={array}/>
+
+      {isWinner && <p>The winner of this game is {!xTurn ? "X" : "O"}</p>}
+      {isWinner && <button onClick={handleRestart}>Restart</button>}
     </div>
   )
 }
