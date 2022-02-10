@@ -1,5 +1,7 @@
 function Button () {
-  throw 'Button not defined'
+  return(
+    <button></button>
+  )
 }
 
 export default Button
