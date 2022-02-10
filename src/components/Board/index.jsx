@@ -2,16 +2,16 @@ import Button from '../Button'
 
 function Board () {
     return(
-      <div>
-        <Button />
-        <Button />
-        <Button />
-        <Button />
-        <Button />
-        <Button />
-        <Button />
-        <Button />
-        <Button />
+      <div className='board'>
+        <Button value="X"/>
+        <Button value="X"/>
+        <Button value="X"/>
+        <Button value="X"/>
+        <Button value="X"/>
+        <Button value="X"/>
+        <Button value="X"/>
+        <Button value="X"/>
+        <Button value="X"/>
       </div>
     )
 }
