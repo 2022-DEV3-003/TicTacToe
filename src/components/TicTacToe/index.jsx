@@ -1,11 +1,12 @@
 import { useState } from 'react';
-import { calculateWinner } from '../../config';
+import { calculateWinner, calculateDraw } from '../../config';
 import Board from '../Board'
 
 function TicTacToe() {
   const [array, setArray] = useState(Array(9).fill(null))
   const [xTurn, setXTurn] = useState(true)
   const isWinner = calculateWinner(array)
+  const isDraw = calculateDraw(array)
 
   function handleClick(index) {
     // copy the state
@@ -34,8 +35,15 @@ function TicTacToe() {
     <div>
       <Board onClick={handleClick} array={array}/>
 
-      {isWinner && <p>The winner of this game is {!xTurn ? "X" : "O"}</p>}
-      {isWinner && <button onClick={handleRestart}>Restart</button>}
+      {!isWinner && !isDraw && <h2> It's {xTurn ? "X" : "O"}'s turn </h2>}
+
+       <div className={(isWinner || isDraw) && "app__end"}>
+         {isWinner && <p>The winner of this game is {!xTurn ? "X" : "O"}</p>}
+         {isDraw && <p>The game ended in a draw!</p>}
+         {(isWinner || isDraw) && (
+           <button onClick={handleRestart}>Play again</button>
+         )}
+       </div>
     </div>
   )
 }

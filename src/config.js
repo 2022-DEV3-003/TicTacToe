@@ -23,3 +23,16 @@ export function calculateWinner(squares) {
 
 // const squares = ["X", null, null, null, null, null, null, "X", "X"]
 // console.log(calculateWinner(squares))
+
+export function calculateDraw(squares) {
+  if (squares.includes(null)) {
+    return false
+  } else {
+    return true
+  }
+}
+
+// Test if code works
+
+// const squares = ["X", "O", "O", "O", "O", "O", "O", null, "X"]
+// console.log(calculateDraw(squares))

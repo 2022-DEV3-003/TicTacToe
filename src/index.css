@@ -16,6 +16,13 @@ h1 {
   margin-bottom: 0.5em;
 }
 
+h2 {
+  color: white;
+  font-weight: 400;
+  font-size: 1.7rem;
+  margin-top: 1em;
+}
+
 .app {
   background-color: #00975e;
   height: 100vh;
@@ -43,4 +50,44 @@ h1 {
 .button:hover {
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.7);
+}
+
+.app__end {
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.app__end > p {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #00975e;
+  margin: 0;
+}
+
+.app__end > button {
+  outline: none;
+  border: 3px solid #00975e;
+  background-color: white;
+  color: #00975e;
+  padding: 0.5em 1em;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  margin: 0;
+}
+
+.app__end > button:hover,
+.app__end > button:focus {
+  background-color: #00975e;
+  color: white;
 }
